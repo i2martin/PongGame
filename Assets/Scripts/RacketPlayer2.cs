@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class RacketPlayer2 : MonoBehaviour
+{
+    public float movementSpeed;
+
+    private void FixedUpdate()
+    {
+        float v = Input.GetAxisRaw("Vertical2");
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2 (0, v) * movementSpeed;
+    }
+}
